@@ -1,0 +1,5 @@
+IN OPERATOR
+
+--- Adalah Operator yang biasa dilakukan untuk mengecek apakah sebuah property ada di dalam object atau tidak
+--- jika property ada di object, maka hasilnya True, jika tidak hasilnya False
+--- Jika isi nya Null Atau undefined, Tetap dianggap ada
