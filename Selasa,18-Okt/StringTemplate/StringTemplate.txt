@@ -1,4 +1,0 @@
-String template
-- Digunakan untuk memudahkan kita menambahkan atau mengambil variabel, gaperlu string + variable + string
-- Menggunakan Backtik ` bkn kutip 1 ' atau kutip 2 "
-- Format mengambil variable = ${nameVar}

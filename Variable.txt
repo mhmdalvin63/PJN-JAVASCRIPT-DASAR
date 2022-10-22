@@ -1,0 +1,8 @@
+1. variable merupakan tempat untuk menyimpan sebuah data
+2. dengan menyimpan data di variable, kita bisa memunculkan data hanya dengan menyebut nama variabel
+3. untuk membuat variabel bisa menggunakan kata kunci var dan di lanjut dengan nama variabel
+-Nama variabel tidak boleh menggunakan spasi
+4. tipe-tipe data di variabel dapat dirubah (dynamic language)
+5. tag var bisa diubah menjadi let dan const, fungsi sama, perbedaannya:
+-let : value tetap bisa diubah" seperti var
+-const : value mutlak/ gabisa diubah, diubah = ERROR
