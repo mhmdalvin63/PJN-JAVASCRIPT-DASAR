@@ -1,0 +1,3 @@
+Tipe data Object
+
+-- Hampir sama dgn array, cmn dibedakan Tipe data object ini bisa menggunakan string
