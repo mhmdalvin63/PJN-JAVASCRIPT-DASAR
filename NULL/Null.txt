@@ -1,0 +1,4 @@
+NULL
+
+--- Null merupakan repesentasi data kosong
+--- Null berbeda dengan UNDEFINED, Null berarti variable sudah ditambahkan Value nya, cuman isi value nya Null
