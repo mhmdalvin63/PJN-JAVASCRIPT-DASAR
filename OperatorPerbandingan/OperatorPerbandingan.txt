@@ -1,0 +1,9 @@
+operator Perbandingan
+> = Lebih Dari
+< = Kurang Dari
+>= = Lebih dari sama dengan
+<= = kurang dari sama dengan
+== = Sama dengan
+=== = sama dengan dan sama tipe
+!= Tidak sama dengan
+!== = Tidak sama dengan atau tidak sama tipe
