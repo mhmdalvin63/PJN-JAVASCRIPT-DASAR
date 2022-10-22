@@ -1,0 +1,5 @@
+SWITCH STATEMENT
+
+--- Hampir sama dengan IF STATEMENT, cuma lebih sederhana cara penggunaaannya
+--- Diakhiri dengan kalimat break;
+--- Kondisi di SWITCH STATEMENT hanya untuk perbandingan ==
