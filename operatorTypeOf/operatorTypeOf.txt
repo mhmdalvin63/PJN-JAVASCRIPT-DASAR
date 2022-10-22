@@ -1,0 +1,4 @@
+OPERATOR TYPE OF
+
+--- Merupakan operator yang bisa digunakan untuk melihat tipe data sebuah value atau variable
+--- Hasil dari OPERATOR TYPEOF adalah string
