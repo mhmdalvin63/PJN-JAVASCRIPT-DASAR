@@ -1,0 +1,12 @@
+Operator Logika
+&& = Dan
+|| = Atau
+! = Kebalikan
+
+Operator &&
+- True && True = True (Selebihnya False)
+Operator ||
+- False || False = False (Selebihnya True)
+Operator !
+- ! True = False
+- ! False = True
