@@ -1,0 +1,10 @@
+Konversi string dan number
+- digunakan apabila kita mau mengubah value dri suatu variabel yang bersifat string menjadi number, Dan sebaliknya
+
+--- parseInt(string) -> Mengubah dri Tipe data String menjadi  Number dengan hasil Bilangan Bulat
+--- parseFloat(string) -> Mengubah dri Tipe data String menjadi  Number dengan hasil Bilangan Pecahan
+--- Number(string) -> Mengubah dri Tipe data String menjadi  Number dengan hasil Bilangan Pecahan dan Bulat
+--- number.toString() -> Mengubah dari Tipe Data Number ke String
+
+---------- Output NaN tidak bisa di apa-apain ----------
+--- isNaN() Digunakan untuk mencgecek apakah sebuah value hasil nya NaN

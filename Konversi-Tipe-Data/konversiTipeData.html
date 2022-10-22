@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Tipe Data</title>
+</head>
+<body>
+    <script>
+        const value1=parseInt("1");
+        const value2= 1;
+        const sum= value1 + value2;
+
+        document.writeln(`<h1> ${sum} </h1>`); 
+
+        document.writeln(`<h1> ${parseInt("1.9")} </h1>`);
+        document.writeln(`<h1> ${parseFloat("1.9")} </h1>`);
+        document.writeln(`<h1> ${Number("1.1")} </h1>`);
+
+        const a = 1;
+        const b = 1;
+        const total = a.toString() + b.toString();
+
+        document.writeln(`<h1> ${total} </h1>`); 
+
+
+        document.writeln(`<h1> ${parseInt("1.9alvin")} </h1>`);
+        document.writeln(`<h1> ${parseFloat("1.9alvin")} </h1>`);
+
+         // ===== Format parse bisa mentolelir jika ada huruf yg masuk dielakang
+        document.writeln(`<h1> ${parseInt("1.9alvin")} </h1>`);
+        document.writeln(`<h1> ${parseFloat("alvin1.9")} </h1>`);
+
+        // ===== Format Number tidak bisa mentolelir jika ada huruf yg masuk
+        document.writeln(`<h1> ${Number("1.9alvin")} </h1>`);
+
+        // ===== isNaN Digunakan untuk mencgecek apakah sebuah value hasil nya NaN
+        const T = Number("salah");
+        document.writeln(`<h1> ${isNaN(T)} </h1>`);
+        document.writeln(`<h1> ${isNaN(200)} </h1>`);
+        document.writeln(`<h1> ${isNaN("alvin")} </h1>`);
+
+
+    </script>
+</body>
+</html>
