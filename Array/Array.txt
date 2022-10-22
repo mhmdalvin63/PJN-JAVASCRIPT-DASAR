@@ -1,0 +1,10 @@
+ARRAY
+-- Adalah Tipe Data yang berisikan kumpulan-kumpulan Data
+-- Array di JS bersifat dinamis, yang artinya data dapat bertambah sendiri ketika memasukkan data ke dalam Array
+-- Value Array bebas mau diisi apa aja
+
+----- array.push(value)    -> Menambahkan data ke Array
+----- array.length         -> Mendapatkan panjang array
+----- array[index]         -> Mendapat data di posisi index
+----- array[index]=value   -> mengubah data di posisi index
+----- delete array[index]  -> Menghapus data di posisi index, namun index tidak tergeser
