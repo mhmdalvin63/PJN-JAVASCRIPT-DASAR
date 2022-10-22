@@ -1,0 +1,7 @@
+operator matematika JS
+Tanda + = Pertambahan
+Tanda - = Pengurangan
+Tanda * = Perkalian
+Tanda ** = Exponensial/Pangkat
+Tanda / = Pembagian
+Tanda % = Sisa Bagi
