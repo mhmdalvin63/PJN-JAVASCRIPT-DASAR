@@ -1,0 +1,15 @@
+FALSY DAN TRUTHY
+
+FALSY
+--- Value dalam konteks Boolean dianggap False
+--- Kondisi False tidak hanya Tipe boolean, ada beberapa diluar boolean diantaranya :
+-------- False          => Type data Boolean bernilai False
+-------- 0, -0          => Number 0 dan -0 dianggap False, diluar itu tidak
+-------- "", '', ``     => Semua string kosong dianggap False
+-------- Null           => Nilai Null dianggap False
+-------- Undefined      => Undefined dianggap False
+-------- NaN            => NaN dianggap False
+
+TRUTHY
+----- Berkebalikan dari Falsy, Truthy adalah data yang dianggap bernulai True
+----- Untuk mengetahui sebuah data adalah Truthy, Yaitu data yang bukan bernilai Falsy
