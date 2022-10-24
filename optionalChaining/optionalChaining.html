@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Chaining</title>
+</head>
+<body>
+    
+    <script>
+
+        // variaeble error
+        // const person = null;
+
+        // variabel bisa
+        const person = {
+            address: {
+                country : "Indonesia"
+            }
+        };
+
+        let country =  person?.address?.country;
+        // tanda ? digunakan untuk mengecek apakah variabel yang dituju bernilai nullish atau tidak, Jika tidak dia akan lanjut dan program berhasil. Jika tidak, program akan berhenti dengan output Error di console
+
+        document.writeln(`<h1> ${country} </h1>`);
+
+    </script>
+</body>
+</html>
