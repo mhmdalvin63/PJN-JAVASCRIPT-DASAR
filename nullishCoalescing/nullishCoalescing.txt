@@ -1,0 +1,5 @@
+NULLIST COALESCING OPERATOR
+
+--- Nullist value adalah Null dan Undefined atau Data data yang kosong
+--- Nullist coalescing operator (??) adalah operator mirip dengan ternary operator, yang membedakan adalah pada kondisi, 
+jika bernilai null atau undefined, baru value default nya diambil
