@@ -1,0 +1,3 @@
+BREAK & CONTINUE
+--- Break digunakan untuk menghentikan Case atau menghentikan eksekusi perulangan
+--- Continue digunakan untuk menghentikan perulangan saat ini, lalu melanjutkan ke perulangan selanjutnya
