@@ -1,0 +1,3 @@
+WHILE LOOP
+--- Adalah versi perulangan yang lebih sederhana dibandin For loop
+--- Di While loop, hanya terdapat kondisi perulangan, Tanpa ada init statement dan post statement
