@@ -1,0 +1,11 @@
+FOR LOOP
+--- for adalah salah satu kata kunci yang bisa digunakan untuk melakukan perulangan
+--- Blok kode yang terdapat di dalam for akan selalu diulangi selama kondisi for terpenuhi, Akan selalu dilakukan perulangan selama kondisi terpenuhi
+SINTAK PERULANGAN FOR
+--> for( init statement;kondisi;post statement){
+            //Blok perulangan
+            }
+*> Init statement akan dieksekusi hanya sekali diawal perulangan
+*> Kondisi akan dilakukan pengecekan dalam setiap perulangan, Jika True perulangan akan dilakukan, jika False perulangan akan berhenti
+*> Post statement akan dieksekusi setiap kali diakhir perulangan
+*> Init statement, Kondisi, Post statement tidak wajib diisi, Jika kondisi tidak diisi, berarti kondisi selalu bernilai True
