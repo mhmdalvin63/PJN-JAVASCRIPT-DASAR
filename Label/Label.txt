@@ -1,0 +1,9 @@
+LABEL
+
+--- label biasa digunakan untuk membungkus suatu perulangan 
+--- dengan menggunakan label, kita bisa melakukan break & continue terhadap perulangan yang kita inginkan, asalkan pada perulangannya kita berikan label
+--- untuk membuat label, kita bisa gunakan nama label diikuti dengan " : "
+--- Contoh penggunaan label = 
+        loopi:  
+         for(){
+            }
