@@ -1,0 +1,12 @@
+FUNCTION
+
+--- Function bisa disebut Mini program
+--- Function adalah blok kode program yang akan berjalan saat dipanggil
+--- Format Function :
+Function namaFunction() {
+}
+--- Format memanggil function :
+namaFunction();
+
+
+*Nama fucntion tidak boleh mengandung spasi
