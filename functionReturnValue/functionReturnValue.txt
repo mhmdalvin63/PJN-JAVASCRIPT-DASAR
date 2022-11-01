@@ -1,0 +1,9 @@
+FUNCTION RETURN VALUE
+
+--- Secara default Function tidak menghasilkan value apapun, tapi kalo kita mau, Kita bisa membuat sebuah Function untuk mengembalikan value mnggunakan kata kunci RETURN
+--- Didalam blok function, untuk menghasilkan nilai tersebut, kita harus menggunakan kata kunci Return lalu diikuti dengan data atau variabel yang ingin kita hasilkan
+--- Karna Function hanya bisa mengembalikan satu data, Kita bisa mengembalikan beberapa data sekaligus dengan menggunakan array sebagai return value nya
+
+
+----- Saat kita menggunakan kata kunci Return, maka kode setelah Return tersebut tidak akan dieksekusi
+----- Kita bisa menggunakan Return untuk menghentikan eksekusi sebuah Function
