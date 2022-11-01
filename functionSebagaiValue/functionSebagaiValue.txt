@@ -1,0 +1,4 @@
+FUNCTION SEBAGAI VALUE
+
+--- Function tidak hanya bisa digunakan sebagai kode program yang di eksekusi, tapi juga bisa digunakan sebagai value
+--- Yang artinya Function bisa disimpan di Variabel, bisa juga dikirim ke parameter ke Function lainnya
