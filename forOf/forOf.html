@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Of</title>
+</head>
+<body>
+    
+    <script>
+
+        const names = ["Muhammad", "Alvin", "Andreas"];
+        for( const name of names){
+            document.writeln(`<h1> ${name} </h1>`);
+        }
+
+        const fullName = "Muhammad Alvin Andreas";
+        for( const character of fullName){
+            document.writeln(`<h1> ${character} </h1>`);
+        }
+
+
+        // Object tidak bisa dieksekusi for of karna object bukan iterable
+        
+        const person = {
+            firstName : "Muhammad",
+            lastName : "Alvin"
+        };
+        for( const name of person){
+            document.writeln(`<h1> ${name} </h1>`);
+        }
+
+
+
+    </script>
+</body>
+</html>

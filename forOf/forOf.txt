@@ -1,0 +1,4 @@
+Perulangan FOR OF 
+
+--- For Of ini digunakan untuk melakukan Iterasi terhadap isi value dari iterable object, seperti array, String, Dan lain-lain.
+--- For of tidak bisa digunakan untuk melakukan iterasi data di object, karna object bukanlah iterable
