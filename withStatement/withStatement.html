@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Statement</title>
+</head>
+<body>
+    
+
+    <script>
+
+        const person = {
+            firstName : "Muhammad",
+            middleName : "Alvin",
+            lastName : "Andreas"
+        };
+
+        // Tanpa penggunaan with statement memanggil harus selalu menyebutkan nama variabel
+        document.writeln(`<h1> ${ person.firstName }</h1>`);
+        document.writeln(`<h1> ${ person.middleName }</h1>`);
+        document.writeln(`<h1> ${ person.lastName }</h1>`);
+
+        const firstName = "Budi";
+        const lastName = "Nugraha";
+
+        // Menggunakan with statement
+        with (person) {
+            document.writeln(`<h1> ${ firstName }</h1>`);
+            document.writeln(`<h1> ${ middleName }</h1>`);
+            document.writeln(`<h1> ${ lastName }</h1>`);
+        }
+
+        
+        document.writeln(`<h1> ${ firstName }</h1>`); // Budi
+
+    </script>
+</body>
+</html>
