@@ -1,0 +1,7 @@
+REST PARAMETER
+
+--- Adalah fitur dimana kita bisa mengiirm data sebanyak-banyaknya pada suatu Parameter dan secara otomatis akan dikonversi menjadi Array
+--- Ketentuan membuat Rest Parameter :
+----- Rest Parameter hanya boleh ada satu di Function, tidak boleh lebih
+----- Rest Parameter hanya boleh berada di posisi paling akhir, tidak boleh didepan atau ditengah 
+
