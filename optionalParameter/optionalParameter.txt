@@ -1,0 +1,4 @@
+OPTIONAL PARAMETER
+
+--- Secara Default, Parameter di function itu optional, Artinya kita tidak wajib mengisi Value ketika memanggil Fynction
+--- Jika tidak ada data yang kita kirim ke Parameter ketika memanggil Function, Maka secara otomatis Parameter tersebut bernilai Undefined
