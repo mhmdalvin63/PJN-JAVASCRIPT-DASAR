@@ -1,0 +1,9 @@
+FUNCTION PARAMETER
+
+--- Kita bisa mengirim informasi ke Function yang ingin kita panggil
+--- Untuk melakukan hal tersebut kita perlu menambahkan Parameter atau Argument di function yang sudah kita buat
+--- Parameter ditempatkan di dalam kurung () dideklarasi method
+--- Jika parameter lebih dari 1, harus dipisah dengan tanda Koma
+
+
+* Pastikan Nama Parameter tidak ada yang sama
