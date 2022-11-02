@@ -1,0 +1,6 @@
+SCOPE
+
+--- Scope Merupakan akses sebuah data
+--- Scope ada 2 jenis, Ada Global Scope Dan Local Scope
+--- Setiap kita membuat Function kita pasti akan membuat Local scope untuk Function tersebut ( Isi dari function )
+--- Data di Global scope bisa di akses di Local Scope, Tapi data di Local scope hanya bisa di akses di Local Scope Atau local Scope dibawahnya
