@@ -1,0 +1,4 @@
+FUNCTION DALAM FUNCTION
+
+--- Function didalam function biasa disebut Inner function
+--- Inner function hanya dapat diakses ditempat kita membuat Functionnya, tidak bisa akses diluar Fucntionnya
