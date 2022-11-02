@@ -1,0 +1,9 @@
+FUNCTION GENERATOR
+--- Adalah function yang digunakan untuk membuat Data Generator
+--- Generator sendiri ialah data yang bisa diiterasi seperti Array
+--- Untuk membuat function generator, Perlu menggunakan tanga * ( Bintang ) setelah kata Function
+--- Untuk mengembalikan data di tiap iterasi, Kita bisa gunakan kata kunci Yield diikuti datanya
+
+
+LAZY EVALUATION
+--- Generator bersifat Lazy, Yaitu jika data belum diambil dari generator maka yield selanjutnya tidak akan di eksekusi
