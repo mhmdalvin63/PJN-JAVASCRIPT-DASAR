@@ -1,0 +1,8 @@
+ANONYMOUS FUNCTION
+
+--- Membuat sebuah Function tanpa nama function
+--- Bisa dibuat dalam sebuah Variable atau jga bisa dibuat ketika mengisi sebuah Parameter
+
+2 cara membuat Anonymous Function : 
+1. Disimpan di sebuah Variable
+2. Dimasukkan ke dalam Parameter
