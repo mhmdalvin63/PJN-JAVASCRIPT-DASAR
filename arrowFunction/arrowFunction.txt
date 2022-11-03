@@ -1,0 +1,18 @@
+ARROW FUNCTION
+
+--- Adalah alternatif pembuatan Function yang lebih sederhana dari function biasanya
+--- Dinamakan Arrow Function karena menggunakan perintah => ( seperti panah )
+--- Berikut contoh kekurangan Arrow Function :
+* Tidak memiliki fitur Argumens Object
+* Tidak bisa menggunakan Function Generator
+* Tidak bisa mengakses This 
+* Tidak bisa mengakses Super
+
+
+----- Arrow Function tanpa blok -----
+--- Jika sebuah Arrow Function isinya sederhana, Misal hanya satu baris, Arrow Function bisa dibuat tanpa menggunakan Blok
+
+----- Arrow Function Return Value -----
+--- Arrow Function bisa mengembalikan Value, sama seperti Function biasanya
+--- Jika menggunakan blok, Perlu menggunakan kata kunci Return
+--- Jika tidak menggunakan Blok, tidak perlu menggunakan kata kunci Return
