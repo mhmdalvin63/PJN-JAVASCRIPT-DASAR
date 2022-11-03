@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Method</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+        // const person = {
+        //     name : "Alvin",
+        //     sayHello: function (name) {
+        //         alert(` Hello ${name} `);
+        //     }
+        // };
+
+
+        const person = {
+            name : "Aldan"
+        };
+
+            // Jika sebuah Object sudah dibuat, Bisa lakukan codingan seperti dibawah untuk menambahkan property di object
+        person.sayHello =  function (name) { 
+            alert(` Hello ${name} `);
+        }
+
+        person.sayHello("Jamal");
+    </script>
+</body>
+</html>

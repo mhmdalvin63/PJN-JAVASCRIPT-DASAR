@@ -1,0 +1,5 @@
+OBJECT METHOD
+
+--- Karena Function juga merupakan Tipe data, Jadi Function juga bisa ditambahkan sebagai Property di Object
+--- Cara pembuatannya juga sama seperti Function sebagai Value
+--- Function di Object disebut juga sebagai Object Method
