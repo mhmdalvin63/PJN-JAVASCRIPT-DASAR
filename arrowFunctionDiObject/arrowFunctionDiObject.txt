@@ -1,0 +1,6 @@
+ARROW FUNCTION DI OBJECT METHOD
+
+--- Arrow Function juga bisa digunakan sebagai Object Method
+--- Arrow Function tidak bisa digunakna untuk mengakses Arguments Object, Function Generator, Kata kunci This dan Kata kunci super
+--- Bisa mengakses This, Namun mengarah ke Window
+--- Jadi pastikan Arrow Function hanya memang ketika tidak bututh fitur-fitur diatas
