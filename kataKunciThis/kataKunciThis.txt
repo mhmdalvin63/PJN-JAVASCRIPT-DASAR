@@ -1,0 +1,5 @@
+KATA KUNCI THIS
+
+--- Kata kunci This adalah referensi ke object milik siapa
+--- Didalam Object Method, This mengarah ke Object pemilik Functionnya
+--- Di Global Scope dan Didalam Function, This mengarah ke Global Object ( di browser keluarnya Window )

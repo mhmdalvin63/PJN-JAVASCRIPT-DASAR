@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata Kunci This</title>
+</head>
+<body>
+    
+
+    <script>
+         // This di Global Scope dan di Local Scope hasilnya tetap window
+
+        console.info(this);
+
+        function sample () {
+            console.info(this);
+
+            function inner(){
+                console.info(this);
+            }
+
+            inner();
+        }
+
+        sample();
+        // This di Object Method mengarah ke Object atau nama Object
+        // Jadi, 
+        const person = {
+            name: "Alvin",
+            sayHello: function (value) {
+                // console.info(` Hello ${value} My name is ${name} `)       // Gapake This
+                console.info(` Hello ${value} My name is ${this.name} `)     // Pake This
+            }
+        };
+
+        person.sayHello("Jamal")
+        person.sayHello("Nanang")
+    </script>
+</body>
+</html>
