@@ -1,0 +1,9 @@
+MASALAH VARIABLE VAR
+
+
+- Kenapa Var tidak digunakan lagi ?
+--- Karena var tidak memiliki block scope, artinya dia tidak mengikat ke Local Scope
+--- Karena masalah ini, Bisa saja data var tidak terprediksi
+
+LET
+ --- Selama beda Scope, Tidak akan mengubah data di Scope yang berbeda
