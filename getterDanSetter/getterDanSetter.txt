@@ -1,0 +1,9 @@
+GETTER
+
+--- Getter adalah Fitur yang digunakan untuk mengambil data pada sebuah property di object
+--- Mengubah Property biasa menjadi sebuah Function
+
+
+SETTER
+
+--- Digunakan untuk mengubah Data  pada sebuah property di object

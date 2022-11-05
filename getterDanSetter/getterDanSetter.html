@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter Dan Setter</title>
+</head>
+<body>
+    
+
+    <script>
+
+        const person = {
+            firstName: "Muhammad",
+            lastName: "Alvin",
+            get fullname(){  // Getter 
+                return ` ${ this.firstName} ${ this.lastName}`
+            },
+
+            set fullName(value){  // Setter  => Digunakan untuk mengubah Data 
+                const array = value.split(" ");
+                this.firstName =  array[0];  // Diubah memnjadi Array ke 1
+                this.lastName =  array[1];   // Diubah memnjadi Array ke 2
+            }
+        };
+
+        person.fullname = " Bagus Wicaksana "; // Pengubahan Data
+        console.table(person); // Menampilkan data yang diubah menggunakan console table
+
+        person.fullname = " Arief Rahman ";
+        console.table(person);
+
+        person.fullname = " Zein Mukaffi ";
+        console.table(person);
+    </script>
+</body>
+</html>
