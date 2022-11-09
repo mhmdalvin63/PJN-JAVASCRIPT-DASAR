@@ -11,16 +11,18 @@
     <script>
 
         // variaeble error
-        // const person = null;
+        const person = null;
 
         // variabel bisa
-        const person = {
-            address: {
-                country : "Indonesia"
-            }
-        };
+        // const person = {
+        //     address: {
+        //         country : "Indonesia"
+        //     }
+        // };
 
         let country =  person?.address?.country;
+
+        // let country =  person.address.country;
         // tanda ? digunakan untuk mengecek apakah variabel yang dituju bernilai nullish atau tidak, Jika tidak dia akan lanjut dan program berhasil. Jika tidak, program akan berhenti dengan output Error di console
 
         document.writeln(`<h1> ${country} </h1>`);
