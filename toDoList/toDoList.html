@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #todo{
+            height: 3rem;
+            width: 20rem;
+        }
+        tr td label{
+            font-size: 3rem;
+        }
+        .a input{
+            height: 2rem;
+            width: 7rem;
+            background-color: rgb(1, 172, 1);
+            color: white;
+            border: none;
+            float: right;
+            font-size: 1rem;
+        }
+        .a input:hover{
+            background-color: rgb(5, 121, 5);
+        }
+        .f{
+            font-size: 2rem;
+        }
+        #search{
+            height: 2rem;
+            width: 20rem;
+        }
+        #todolistBody tr td input{
+            height: 2rem;
+            width: 7rem;
+            background-color: red;
+            color: white;
+            border: none;
+            font-size: 1rem;
+            border: 1px solid black;
+        }
+        #todolistBody tr td input:hover{
+            background-color: rgb(145, 18, 1);
+        }
+    </style>
+</head>
+<body>
+    
+
+    <form name="todoform">
+        <table>
+            <tbody>
+                <tr>
+                    <td><label for="todo">Todo :</label></td>
+                    <td> <input type="text" id="todo" name="todo" ></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="a"><input type="submit" value="add"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+    <h1>To Do List</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="f">Filter :</th>
+                <th><input type="text" name="search" id="search"></th>
+            </tr>
+        </thead>
+        <tbody id="todolistBody">   
+            <tr>
+                <td class="b"><input type="button" value="done"></td> 
+                <td>Todo description</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        // URUTAN JS TODOLIST
+        // 1 => Mengambil forms, Line 118 - 128
+        // 2 => Menyimpan data dari Forms, Line 54 - 57, 
+        // 3 => Menampilkan Data yang ditampung,  Line 74 - 98, Line 101 - 114
+        // 4 => Filtering Data ToDoList, Line 108 - 112, Line 132 - 138
+        // 5 => Hapus Data ToDoList, Line 68 - 71, Line 83 - 85, Line 111 ( Penambahan "i"), Line 74 Penambahan Parameter index
+
+
+        // Ambil data dri input type todo dan memasukkan ke var todolist
+        const todolist = [  // Untuk menampung data dari input todo
+            "Belajar JavaSript Dasar",
+            "Belajar Javascript Object Oriented Programing",
+        ]; 
+
+        // Function untuk menghapus data sebelumnya
+        function clearTodolist(){ 
+            const todolistBody = document.getElementById("todolistBody"); // Mengambil hasil dri todolistBody
+            while(todolistBody.firstChild){ // SELAMA todolistBody masih mempunyai firstChild, Maka firstChild akan dihapus
+                todolistBody.removeChild(todolistBody.firstChild); // Eksekusi penghapusan firstChild
+            }
+        }
+
+        // Function untuk menghapus  Data berdasarkan Index
+        function removeToDoList(index){
+            todolist.splice(index, 1); // Splice digunakan untuk menghapus data berdasarkan index di array dan Angka 1 berarti hanya 1 index yang dihapus
+            displayToDoList();
+        }
+
+        // Function untuk menampilkan Data 
+        function addToDoList(index, todo){
+            const tr = document.createElement("tr");
+                const tdButton = document.createElement("td");
+                tr.appendChild(tdButton);
+
+                // Membuat Button Done
+                const buttonDone = document.createElement("input");
+                buttonDone.type = "button";
+                buttonDone.value = "Done";
+                buttonDone.onclick = function(){
+                    removeToDoList(index)
+                };
+                tdButton.appendChild(buttonDone);
+                //==================================================
+
+                const tdTodo = document.createElement("td");
+                tdTodo.textContent = todo;
+                tr.appendChild(tdTodo);
+
+                const todolistBody = document.getElementById("todolistBody");
+                todolistBody.appendChild(tr); // Menampilkan Data
+                
+
+                // .appendChild digunakan untuk menampilkan Object
+        }
+
+         // Function untuk menampilkan todolist
+        function displayToDoList(){ 
+
+            clearTodolist(); // Menjalankan Function clearTodolist sblm perulangan di eksekusi
+
+            for (let i = 0; i < todolist.length; i++) {
+                const todo = todolist[i];
+
+                const searchText = document.getElementById("search").value.toLowerCase(); // MASIH BINGUNG
+                
+                if(todo.toLowerCase().includes(searchText)){  // JIKA todo includes/mengandung kata atau huruf dri CONST searchText  
+                    addToDoList(i, todo); // Memnggil Function addToDoList yg includes CONST searchText, dan i berarti Index
+                }
+            }
+        }
+
+        // First
+        // document.forms['todoform'].onsubmit => Mengambil Forms
+        document.forms['todoform'].onsubmit = function (event) { // function (event) => Aksi yg akan dilakukan
+            event.preventDefault();   // event.preventDefault(); => Agar form tidak auto submit
+
+            const todo = document.forms['todoform']['todo'].value // const todo = document.forms['todoform']['todo'].value => Mengambil todo dari forms todoform lalu input todo lalu mengambil value nya
+            todolist.push(todo);   // todolist.push(todo); => Mengepush/Menambahkan variable todo ke dalam variable todolist
+
+            document.forms['todoform'].reset(); // document.forms['todoform'].reset(); => Untuk menghapus/mereset data ketika sudah ditambahkan
+
+            console.info(todolist); // console.info(todolist); => Untuk pengecekan aja biar tau data udah masuk atau belum
+            displayToDoList();
+        };
+
+        //  Untuk Filtering
+        // Penggunaan onkeyup dan onkeydown, Data akan lgsng ke trigger / langsung ter cari
+        const searchInput = document.getElementById("search");
+        searchInput.onkeyup = function(){ 
+            displayToDoList();
+        }
+        searchInput.onkeydown = function(){
+            displayToDoList();
+        }
+
+        // Second
+        displayToDoList(); // Menjalankan Function displayToDoList
+
+        
+        
+      
+
+        
+     
+        
+        
+
+    </script>
+</body>
+</html>
