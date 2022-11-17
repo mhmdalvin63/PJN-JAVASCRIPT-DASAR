@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <style>
         body{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -48,8 +50,12 @@
             background-color: rgb(145, 18, 1);
         }
     </style>
+    <!-- Bootstrap CSS -->
+    
 </head>
 <body>
+    
+  
     
 
     <form name="todoform">
@@ -83,9 +89,77 @@
             </tr>
         </tbody>
     </table>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+            <form name="todoformmodal">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> <input type="text" id="todomodal" name="todomodal" ></td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+                <table>
+                    <tr>
+                        <td></td>
+                        <td type="td" class="btn btn-danger" data-bs-dismiss="modal">Close</td>
+                        <td class="a" ><input class="btn btn-secondary" type="submit" value="add"></td>
+                    </tr>
+                </table>
+            </form>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  <table>
+    <thead>
+        <tr>
+            <th class="f">Filter :</th>
+            <th><input type="text" name="searchmodal" id="searchmodal"></th>
+        </tr>
+    </thead>
+    
+</table>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                  </tr>
+                </thead>
+                <tbody id="todolistBodymodal">   
+                    <tr>
+                        <td class="b"><input type="button" value="done"></td> 
+                        <td>Todo description</td>
+                    </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+  </div>
+  
 
     <script>
-        // URUTAN JS TODOLIST
+        // URUTAN JS TODOLIST 88
         // 1 => Mengambil forms, Line 118 - 128
         // 2 => Menyimpan data dari Forms, Line 54 - 57, 
         // 3 => Menampilkan Data yang ditampung,  Line 74 - 98, Line 101 - 114
@@ -183,15 +257,108 @@
         // Second
         displayToDoList(); // Menjalankan Function displayToDoList
 
-        
-        
-      
 
-        
-     
-        
-        
+
+        // Ambil data dri input type todo dan memasukkan ke var todolist
+        const todolistmodal = [  // Untuk menampung data dari input todo
+            "Belajar JavaSript Dasar",
+            "Belajar Javascript Object Oriented Programing",
+        ]; 
+
+        // Function untuk menghapus data sebelumnya
+        function clearTodolistmodal(){ 
+            const todolistBodymodal = document.getElementById("todolistBodymodal"); // Mengambil hasil dri todolistBody
+            while(todolistBodymodal.firstChild){ // SELAMA todolistBody masih mempunyai firstChild, Maka firstChild akan dihapus
+                todolistBodymodal.removeChild(todolistBodymodal.firstChild); // Eksekusi penghapusan firstChild
+            }
+        }
+
+        // Function untuk menghapus  Data berdasarkan Index
+        function removeToDoListmodal(index){
+            todolistmodal.splice(index, 1); // Splice digunakan untuk menghapus data berdasarkan index di array dan Angka 1 berarti hanya 1 index yang dihapus
+            displayToDoListmodal();
+        }
+
+        // Function untuk menampilkan Data 
+        function addToDoListmodal(index, todomodal){
+            const tr = document.createElement("tr");
+                const tdButtonmodal = document.createElement("td");
+                tr.appendChild(tdButtonmodal);
+
+                // Membuat Button Done
+                const buttonDonemodal = document.createElement("input");
+                buttonDonemodal.type = "button";
+                buttonDonemodal.value = "Done";
+                buttonDonemodal.onclick = function(){
+                    removeToDoListmodal(index)
+                };
+                tdButtonmodal.appendChild(buttonDonemodal);
+                //==================================================
+
+                const tdTodomodal = document.createElement("td");
+                tdTodomodal.textContent = todomodal;
+                tr.appendChild(tdTodomodal);
+
+                const todolistBodymodal = document.getElementById("todolistBodymodal");
+                todolistBodymodal.appendChild(tr); // Menampilkan Data
+                
+
+                // .appendChild digunakan untuk menampilkan Object
+        }
+
+         // Function untuk menampilkan todolist
+        function displayToDoListmodal(){ 
+
+            clearTodolistmodal(); // Menjalankan Function clearTodolist sblm perulangan di eksekusi
+
+            for (let i = 0; i < todolistmodal.length; i++) {
+                const todomodal = todolistmodal[i];
+
+                const searchTextmodal = document.getElementById("searchmodal").value.toLowerCase(); // MASIH BINGUNG
+                
+                if(todomodal.toLowerCase().includes(searchTextmodal)){  // JIKA todo includes/mengandung kata atau huruf dri CONST searchText  
+                    addToDoListmodal(i, todomodal); // Memnggil Function addToDoList yg includes CONST searchText, dan i berarti Index
+                }
+            }
+        }
+
+        // First
+        // document.forms['todoform'].onsubmit => Mengambil Forms
+        document.forms['todoformmodal'].onsubmit = function (event) { // function (event) => Aksi yg akan dilakukan
+            event.preventDefault();   // event.preventDefault(); => Agar form tidak auto submit
+
+            const todomodal = document.forms['todoformmodal']['todomodal'].value // const todo = document.forms['todoform']['todo'].value => Mengambil todo dari forms todoform lalu input todo lalu mengambil value nya
+            todolistmodal.push(todomodal);   // todolist.push(todo); => Mengepush/Menambahkan variable todo ke dalam variable todolist
+
+            document.forms['todoformmodal'].reset(); // document.forms['todoform'].reset(); => Untuk menghapus/mereset data ketika sudah ditambahkan
+
+            console.info(todolistmodal); // console.info(todolist); => Untuk pengecekan aja biar tau data udah masuk atau belum
+            displayToDoListmodal();
+        };
+
+        //  Untuk Filtering
+        // Penggunaan onkeyup dan onkeydown, Data akan lgsng ke trigger / langsung ter cari
+        const searchInputmodal = document.getElementById("searchmodal");
+        searchInputmodal.onkeyup = function(){ 
+            displayToDoListmodal();
+        }
+        searchInputmodal.onkeydown = function(){
+            displayToDoListmodal();
+        }
+
+        // Second
+        displayToDoListmodal(); // Menjalankan Function displayToDoList
+
 
     </script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
 </body>
 </html>
